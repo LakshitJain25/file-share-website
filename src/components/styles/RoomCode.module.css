@@ -1,0 +1,104 @@
+.container {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../public/bg3.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.subContainer {
+    height: max-content;
+    width: max-content;
+    backdrop-filter: blur(20px);
+    padding:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    animation: slide 0.5s ease;
+
+}
+
+.mainHeading{
+    font-size:4rem;
+    letter-spacing: 2px;
+    margin-bottom:1rem;
+    color:white;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@keyframes slide {
+    0%{
+        opacity: 0;
+        transform: translateX(-40rem);
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.codeInput {
+    border-radius: 10px;
+    /* border: white 1px solid; */
+    color:white;
+    text-align: center;
+    margin: 1rem 0;
+    height:2rem;
+    width:100%;
+    outline: none;
+    padding: 0.2rem 0.5rem;
+    font-size:1.5rem;
+    background: rgba(0, 0, 0, 0.827);
+
+}
+
+button{
+    font-size: 1.4rem;
+    border: none;
+    letter-spacing: 1px;
+    border: none;
+    padding:0.2rem;
+    background: rgba(0, 0, 0, 0.237);
+    border-radius: 10px;
+    color:rgb(255, 255, 255);
+    transition: 0.2s ease;
+}
+
+button:hover{
+    cursor: pointer;
+    padding:0.3rem;
+}
+
+.roomCode {
+    font-size: 3rem;
+    color: white;
+}
+
+.fileTrans {
+    height: 10rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}

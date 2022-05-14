@@ -1,0 +1,121 @@
+.container {
+    height: max-content;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url("../../../public/bg4.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 5rem;
+    /* width:100vw; */
+    /* position: fixed; */
+}
+
+.sendFormContainer {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sendForm {
+    color: white;
+    padding: 1rem;
+    height: max-content;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.01);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+}
+
+.sendForm h2 {
+    font-size: 2.6rem;
+    color: white;
+    letter-spacing: 0px;
+    margin-bottom: 0.6rem;
+}
+
+::-webkit-file-upload-button {
+    font-size: 1.1rem;
+    background: white;
+    color: black;
+    padding: 0.2em;
+    margin-bottom: 0.6rem;
+}
+
+::-webkit-file-upload-button:hover {
+    background: black;
+    color: white;
+}
+
+.files {
+    color: white;
+    /* background-attachment: fixed; */
+    margin-left: 25rem;
+    width: calc(100vw - 30rem);
+    min-height: calc(100vh - 7rem);
+    padding: 0 5rem;
+}
+
+.downloading {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+}
+.singleFile {
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.59);
+    margin: 2rem 0;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid gray;
+    transition: 0.3s ease;
+    animation: fadeUp 1s ease;
+}
+@keyframes fadeUp {
+    0% {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.singleFile:hover {
+    color: black;
+    background-color: white;
+}
+.singleFile img {
+    height: 32px;
+}
+button {
+    background: white;
+    border: none;
+    border-radius: 0;
+    color: black;
+    transition: 0.2s ease;
+}
+button:hover {
+    background: black;
+    border: none;
+    border-radius: 1px;
+    color: white;
+}
+
+.loading {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.loading h4 {
+    text-align: center;
+}
