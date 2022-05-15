@@ -1,5 +1,5 @@
 .container {
-    height: max-content;
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url("../../../public/bg4.jpg");
     background-attachment: fixed;
     background-size: cover;

@@ -1,6 +1,6 @@
 import '../App.css';
 import { Line } from 'rc-progress';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 import styles from './styles/SendFile.module.css'
 const baseUrl = "https://file-share-server-multer.herokuapp.com"
@@ -31,17 +31,17 @@ const SendFile = ({ curCode, socketRef }) => {
     socketRef.current.on("reload page", () => {
         console.log("told to reload the page client side")
         getFiles()
-    })
+    }, [])
 
-    const getFiles = async () => {
+    const getFiles = useCallback(async () => {
         // setUploading(true)
         const res = await axios.get(`${baseUrl}/files/${curCode}`)
         console.log(res.data)
         setAllFiles(res.data)
-    }
+    }, [curCode, setAllFiles])
     useEffect(() => {
         getFiles()
-    }, [])
+    }, [getFiles])
 
     const download = async (allFile) => {
         setDownloading(true)
