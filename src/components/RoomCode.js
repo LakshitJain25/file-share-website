@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react'
 import io from 'socket.io-client'
-import axios from 'axios'
+// import axios from 'axios'
 import styles from './styles/RoomCode.module.css'
 const RoomCode = ({ setCurCode, setSocketRef }) => {
     const [code, setCode] = useState(null)
-    const [error, setError] = useState(null)
     const socketRef = useRef()
     const baseUrl = "https://file-share-server-multer.herokuapp.com"
     // const baseUrl = "http://localhost:5000"
@@ -22,9 +21,6 @@ const RoomCode = ({ setCurCode, setSocketRef }) => {
         const codeInt = parseInt(code)
         if (code.length === 4) {
             connect(codeInt)
-        }
-        else {
-            setError("please enter valid room code ")
         }
     }
     const generateCode = () => {
